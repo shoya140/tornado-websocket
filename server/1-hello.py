@@ -5,7 +5,7 @@ import tornado.ioloop
 
 from tornado.options import define, options
 define("port", default=8000, help="run on the given port", type=int)
-define("debug", default=False, help="1:watch in real time (debug mode)", type=bool)
+define("debug", default=False, help="autoreload during debug is true", type=bool)
 
 class IndexHander(tornado.web.RequestHandler):
     def get(self):
