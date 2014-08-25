@@ -1,0 +1,16 @@
+<html>
+  <head>
+    <title></title>
+    <script language="javascript">
+      var ws = new WebSocket("ws://localhost:8000/socket");
+      ws.onopen = function() {
+       ws.send("Hello, world");
+      };
+      ws.onmessage = function (e) {
+        document.write("<p>"+e.data+"</p>");
+      };
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
